@@ -5,21 +5,21 @@
 class CustomLogMarshaler < Formula
   desc "Attempt to R.I.P PII or unnecessary info in logs and reduce log ingestion costs in the process."
   homepage "https://github.com/solodynamo/custom-log-marshaler"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/solodynamo/custom-log-marshaler/releases/download/v1.1.0/custom-log-marshaler_1.1.0_darwin_arm64.tar.gz"
-      sha256 "de7be837cf791c0abd5248998db4092f324a4bc19e45ebb03f1cead0b511c92c"
+    if Hardware::CPU.intel?
+      url "https://github.com/solodynamo/custom-log-marshaler/releases/download/v1.2.0/custom-log-marshaler_1.2.0_darwin_amd64.tar.gz"
+      sha256 "da5fa6e14a59522b84de64f1ea40b220680c1769b41600406815e2c8dc0f2adc"
 
       def install
         bin.install "custom-log-marshaler"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/solodynamo/custom-log-marshaler/releases/download/v1.1.0/custom-log-marshaler_1.1.0_darwin_amd64.tar.gz"
-      sha256 "d23a1ccc400427d2db8852d7cabc18ae8014fb64b1046f48e1a3625c026c0698"
+    if Hardware::CPU.arm?
+      url "https://github.com/solodynamo/custom-log-marshaler/releases/download/v1.2.0/custom-log-marshaler_1.2.0_darwin_arm64.tar.gz"
+      sha256 "f883b6f3b64f7553d6b265af279b87a3512fe9181a08e656a6bbadad05c29f8d"
 
       def install
         bin.install "custom-log-marshaler"
@@ -29,16 +29,16 @@ class CustomLogMarshaler < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/solodynamo/custom-log-marshaler/releases/download/v1.1.0/custom-log-marshaler_1.1.0_linux_amd64.tar.gz"
-      sha256 "7823c21e341f8634a7b31e91456c96311fdb36b73b81ae62a7d7280255e29ce2"
+      url "https://github.com/solodynamo/custom-log-marshaler/releases/download/v1.2.0/custom-log-marshaler_1.2.0_linux_amd64.tar.gz"
+      sha256 "20e98e3e6fc9d58f6e60558c94afabe00e154bde3c7d8bdf1913e905dcb0777d"
 
       def install
         bin.install "custom-log-marshaler"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/solodynamo/custom-log-marshaler/releases/download/v1.1.0/custom-log-marshaler_1.1.0_linux_arm64.tar.gz"
-      sha256 "184fc77e418406bc7d4b384de7f012e0d584cf7d81367e46e695e269fe60055e"
+      url "https://github.com/solodynamo/custom-log-marshaler/releases/download/v1.2.0/custom-log-marshaler_1.2.0_linux_arm64.tar.gz"
+      sha256 "6357a34ec80b936492b3f40fafe78f70531d93fdc601e7e83e18304cb05f102a"
 
       def install
         bin.install "custom-log-marshaler"
